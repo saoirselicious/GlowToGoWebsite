@@ -5,7 +5,10 @@ module.exports = function(eleventyConfig) {
     throwOnUndefined: true,
     autoescape: false, // warning: don’t do this!
   });
+
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  eleventyConfig.addPassthroughCopy("css");
+  eleventyConfig.addPassthroughCopy("src");
   eleventyConfig.addPassthroughCopy("js");
   eleventyConfig.addPassthroughCopy("images");
   eleventyConfig.addPassthroughCopy("json");

@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build":"NODE_ENV=production eleventy --pathprefix 'GlowToGoWebsite'"
+    "start": "eleventy --serve",
+    "build": "NODE_ENV=production eleventy --pathprefix 'GlowToGoWebsite'"
 
   },
   "keywords": [],

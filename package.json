@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+<<<<<<< HEAD
+    "build":"NODE_ENV=production eleventy --pathprefix 'main'"
+=======
     "build":"NODE_ENV=production eleventy --pathprefix 'gh-pages'"
+>>>>>>> 6e3fa74e645af4c4ed7c37cd99fde1ebe8a9cb72
   },
   "keywords": [],
   "author": "",

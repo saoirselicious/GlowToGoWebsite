@@ -1,7 +1,7 @@
 ---
 heading: "Man must explore, and this is exploration at its greatest"
 subheading: "Problems look mighty small from 150 miles up"
-layout: blogLayout.njk
+layout: /blogLayout.njk
 date: 2016-01-01
 backgroundImage: images/post-bg.jpg
 tags: bloging

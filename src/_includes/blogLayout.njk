@@ -1,0 +1,54 @@
+{% include "_header.njk" %}
+
+<section class="site-section" class="mb-7" style="background-image: url('{{ backgroundImage }}')">
+    <div class="container">
+        <div class="ow justify-content-center align-items-center intro">
+            <div class="col-md-12">
+                <div class="post-heading">
+                    <h1>{{ heading }}</h1>
+                    <h2 class="subheading">{{ subheading }}</h2>
+                    <span class="meta">
+                        Posted by
+                        <a href="#!">Start Bootstrap</a>
+                        on August 24, 2022
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="site-section">
+    <div class="container">
+      <div class="row">
+        <div class="media-body d-block media-feature">
+        <div class="col-12">
+            {{ content | safe }}
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+
+{% include "_footer.njk" %}
+
+    <!--<section class="mb-7" style="background-image: url('assets/img/post-bg.jpg')">
+        <div class="container">
+            <div class="ow justify-content-center align-items-center intro">
+                <div class="col-md-8">
+                    <div class="post-heading">
+                        <h1>{{ heading }}</h1>
+                        <h2 class="subheading">{{ subheading }}</h2>
+                        <span class="meta">
+                            Posted by
+                            <a href="#!">Start Bootstrap</a>
+                            on August 24, 2022
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+

@@ -49,8 +49,9 @@
           {%- for blog in collections.all | eleventyNavigation("blog") %}
             {% if counter < 3 %}
               <li> 
-                <a href="{{ blog.url }}">
+                <a href="{{ blog.url | url}}">
                 <span class="post-meta">21st October 2023</span>
+                <a href="{{ blog.url | url}}">
                 <h3>{{ blog.title }}</h3>
               </a>
               </li> 

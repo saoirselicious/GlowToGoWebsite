@@ -1,4 +1,5 @@
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+
 const fs = require('fs');
 // clear site on initial build
 fs.rmdirSync('_site', { recursive: true });

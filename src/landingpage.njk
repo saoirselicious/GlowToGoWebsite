@@ -68,8 +68,8 @@ eleventyNavigation:
         </div>
                 
         <div class="row">
-            {% if pagination.href.next %}<div class="col-6 text-right"><a href="{{ pagination.href.next }}" class="btn btn-primary">Next</a></div>{% endif %}
-            {% if pagination.href.previous %}<div class="col-6 text-left mb-3"><a href="{{ pagination.href.previous }}"  class="btn btn-primary">Previous</a></div>{% endif %}
+            {% if pagination.href.next %}<div class="col-6 text-right"><a href="{{ pagination.href.next | url}}" class="btn btn-primary">Next</a></div>{% endif %}
+            {% if pagination.href.previous %}<div class="col-6 text-left mb-3"><a href="{{ pagination.href.previous | url}}"  class="btn btn-primary">Previous</a></div>{% endif %}
         </div>
       </div>
     </section>

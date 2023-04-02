@@ -40,7 +40,8 @@
                     {% if counter < 6 %}        
                       <a class="dropdown-item" href="{{ child.url | url }}">{{ child.title }}</a>    
                     {% elif counter == 6 %}
-                        <a class="dropdown-item" href="LandingPage">Click to view more blog posts</a>
+                    {% set landingPage = collections.all | eleventyNavigation("blog") %}
+                        <a class="dropdown-item" href="{{ landingPage.url | url }}">Click to view more blog posts</a>
                     {% endif %}
                   {% endfor -%} 
                 </div>

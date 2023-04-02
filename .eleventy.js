@@ -11,6 +11,17 @@ module.exports = function(eleventyConfig) {
     autoescape: false, // warning: don’t do this!
   });
 
+  /*eleventyConfig.addFilter("dropContentFolder", function (path) {
+    if (path.endsWith("/index")) {
+        path = path.substring(0, -6);
+    }
+    const pathToDrop = "/notes"
+    if (path.indexOf(pathToDrop) !== 0) {
+        return path
+    }
+    return path.slice(pathToDrop.length)
+})*/
+
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("js");

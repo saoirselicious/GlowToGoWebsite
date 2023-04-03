@@ -4,14 +4,22 @@ eleventyNavigation:
 ---
 {% include "_header.njk" %}
 <script src="../../js/prices.js"></script>
-
+  {% set listofKeys = []-%}
+  {% for key, keyArray in list -%}
+    {% set listofKeys = (listofKeys.push(key), listofKeys) %}
+  {% endfor -%}
+  
 <section class="site-section">
     <div class="container">
       <div class="row">
         <div class="col-12">
           <nav class="navbar navbar-expand-lg navbar-light bg-light">
               <ul class="navbar-nav mr-auto" id="categoryList">
-
+                {% for key in listofKeys -%}
+                  <li class = "nav-item">
+                      <button class ="btn nav-link shadow-none" id="Btn_{{key | replace(" ", "_")}}" onclick="showHideCatList('ul_{{key | replace(" ", "_")}}')">{{key}}</button>
+                  </li>
+                {% endfor -%}
               </ul>
           </nav>
         </div>
@@ -24,10 +32,32 @@ eleventyNavigation:
     <div class="container">
       <div class="row">
         <div class="col-md-5">
-
-          <div class="media-body d-block media-feature text-center justify-content-center">
+          <div class="media-body d-block media-feature">
             <div class="row justify-content-center">
-              <div id="divOptions">
+              <div id="divOptions" >
+                {% for key in listofKeys -%}
+                  {% set currentKey = key %}
+                  {% if currentKey == listofKeys[0] %}
+                    <ul class="nav" id="ul_{{currentKey | replace(" ", "_")}}">
+                  {% else %}
+                    <ul class="nav" id="ul_{{currentKey | replace(" ", "_")}}" style="display: none;">
+                  {% endif %}
+                  {% for value in list[key] -%}
+                    <li class = "nav-item">
+                      <div class = "nav-link d-flex justify-content-between">
+                        <a href="#">{{value.Name}}</a>
+                        <div> €{{value.Cost}} </div>
+                      </div>
+                    </li>
+                {% endfor -%}
+                  </ul>
+                {% endfor -%}
+                    <!--<li class="nav-item">
+                      <div class = "nav-link d-flex justify-content-between">
+                        <a href="#">Here</a>
+                        <div> $200 </div>
+                      </div>
+                    </li>-->
 
               </div>
             </div>
@@ -35,7 +65,7 @@ eleventyNavigation:
         </div>
         <div class="col-md-7">
           <div class="media d-block media-feature text-center" id="">
-            <img class="img-fluid" width() src="./images/back_massage.jpg">
+            <img class="img-fluid" width() src="{{'../../images/back_massage.jpg'|url}}">
             <br>
             <br>
             <div id="divOptionInfo">
@@ -47,6 +77,30 @@ eleventyNavigation:
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="site-section">
+    <div class="container">
+      <div class="row">
+       <select name="cars" id="cars">
+        {% for key in listofKeys -%}
+          <option value="{{key}}">{{key}}</option>
+        {% endfor -%}
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <section class="site-section">
+    <div class="container">
+      <div class="row">
+       <select name="cars" id="cars">
+        {% for value in list[listofKeys[0]] -%}
+          <option value="{{value.Name}}">{{value.Name}}</option>
+        {% endfor -%}
+        </select>
       </div>
     </div>
   </section>

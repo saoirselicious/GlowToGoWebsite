@@ -1,8 +1,8 @@
-initSetup();
+//initSetup();
 
-let category;
+let category ="ul_Massage";
 
-function initSetup() {
+/*function initSetup() {
   console.log("setup");
 
   fetchJSON().then(json => {
@@ -55,23 +55,24 @@ function initSetup() {
     }
     category = Object.keys(json[0])[0];
   });
-}
+}*/
 
 function showHideCatList(selectedButtonID) {
   console.log("showHideCatList");
   if (category !== selectedButtonID) {
-    document.getElementById("UL" + category).style.display = "none";
-    document.getElementById("UL" + selectedButtonID).style.display = "Block";
+    document.getElementById(category).style.display = "none";
+    console.log(selectedButtonID);
+    document.getElementById(selectedButtonID).style.display = "Block";
     category = selectedButtonID;
   }
 }
 
-async function fetchJSON() {
+/*async function fetchJSON() {
   console.log(fetchJSON);
-  const response = await fetch('../json/list.json');
+  const response = await fetch('../../_data/json/list.json');
   const json = await response.json();
   return json;
-}
+}*/
 
 function setOptionDetails(selectedOptionID) {
   console.log("setOptionDetails")
@@ -103,8 +104,8 @@ function setOptionDetails(selectedOptionID) {
   });
 }
 
-function removeAllChildNodes(parent) {
+/*function removeAllChildNodes(parent) {
   while (parent.firstChild) {
     parent.removeChild(parent.firstChild);
   }
-}
+}*/

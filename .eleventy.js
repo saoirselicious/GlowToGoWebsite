@@ -21,12 +21,11 @@ module.exports = function(eleventyConfig) {
     }
     return path.slice(pathToDrop.length)
 })*/
-
+  
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("js");
   eleventyConfig.addPassthroughCopy("images");
-  eleventyConfig.addPassthroughCopy("json");
   return {
     passthroughFileCopy: true
   }

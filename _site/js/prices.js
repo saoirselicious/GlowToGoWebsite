@@ -1,78 +1,19 @@
 //initSetup();
 
-let category ="ul_Massage";
+let category ="Massage";
 
-/*function initSetup() {
-  console.log("setup");
-
-  fetchJSON().then(json => {
-    for (let i = 0; i < Object.keys(json[0]).length; i++) {
-      category = Object.keys(json[0])[i];
-      let categoryList = document.createElement("li");
-      let button = document.createElement("Button");
-      let categoryTextElem = document.createTextNode(category);
-
-      categoryList.classList.add("nav-item");
-      button.classList.add("btn", "nav-link", "shadow-none");
-      button.setAttribute("id", "Btn" + category);
-      button.onclick = function () { showHideCatList(this.id.replace("Btn", "")); }
-      categoryList.appendChild(button);
-      button.appendChild(categoryTextElem);
-      document.getElementById("categoryList").appendChild(categoryList);
-
-      let optionsUL = document.createElement("table");
-      let tbody = document.createElement("tbody");
-      optionsUL.classList.add("table",  "table-borderless");
-      if (i > 0) {
-        optionsUL.style.display = "none";
-      }
-      optionsUL.setAttribute("id", "UL" + category);
-
-      for (let i = 0; i < Object.keys(json[0][category]).length; i++) {
-        let optionList = document.createElement("tr");
-        let optionLink = document.createElement("td");
-        let optionButton = document.createElement("button");
-        let cost = document.createElement("td");
-        let optionsText = document.createTextNode(json[0][category][i]["Name"]);
-        let costText = document.createTextNode("Euro: " + json[0][category][i]["Cost"]);
-
-        optionButton.setAttribute("id", json[0][category][i]["Name"]);
-        //optionLink.classList.add("text-left");
-        optionButton.onclick = function () { setOptionDetails(this.id); }
-        optionButton.classList.add("btn", "btn-sm", "btn-primary-outline", "shadow-none");
-        optionButton.appendChild(optionsText);
-        optionLink.appendChild(optionButton);
-        cost.appendChild(costText);
-
-        optionList.appendChild(optionLink);
-        optionList.appendChild(cost);
-        //optionList.classList.add("list-group", "list-group-item-border-0");
-
-        tbody.appendChild(optionList);
-        optionsUL.appendChild(tbody);
-        document.getElementById("divOptions").appendChild(optionsUL);
-      }
-    }
-    category = Object.keys(json[0])[0];
-  });
-}*/
 
 function showHideCatList(selectedButtonID) {
-  console.log("showHideCatList");
-  if (category !== selectedButtonID) {
-    document.getElementById(category).style.display = "none";
-    console.log(selectedButtonID);
+  console.log(selectedButtonID);
+  if ("ul_"+category !== selectedButtonID) {
+    document.getElementById("ul_"+category).style.display = "none";
     document.getElementById(selectedButtonID).style.display = "Block";
-    category = selectedButtonID;
+  
+    document.getElementById("form_"+category).style.display = "none";
+    document.getElementById(selectedButtonID.replace("form","ul")).style.display = "Block";
+    category = selectedButtonID.replace("ul_","");
   }
 }
-
-/*async function fetchJSON() {
-  console.log(fetchJSON);
-  const response = await fetch('../../_data/json/list.json');
-  const json = await response.json();
-  return json;
-}*/
 
 function setOptionDetails(selectedOptionID) {
   console.log("setOptionDetails")
@@ -104,8 +45,20 @@ function setOptionDetails(selectedOptionID) {
   });
 }
 
-/*function removeAllChildNodes(parent) {
-  while (parent.firstChild) {
-    parent.removeChild(parent.firstChild);
-  }
-}*/
+$("#form_category").change(function () {
+  rerunSelectCat($(this).val());
+});
+
+let selectOptions=document.getElementById("form_options"); 
+
+function rerunSelectCat(selectedCategory){
+  console.log(selectedCategory);
+
+  document.getElementById("ul_"+category).style.display = "none";
+  document.getElementById("ul_"+selectedCategory).style.display = "Block";
+
+  document.getElementById("form_"+category).style.display = "none";
+  document.getElementById("form_"+selectedCategory).style.display = "Block";
+  category = selectedCategory.replace("form_", "");
+}
+

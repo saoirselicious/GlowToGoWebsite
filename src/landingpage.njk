@@ -41,16 +41,16 @@ eleventyNavigation:
         {% set counter = 1 %}
         {%- for blog in pagination.items | eleventyNavigation("blog") %}
           {% if counter === 1 %}
-
             <div class="row">
           {% endif %} 
 
           <div class="col-md-4 element-animate fadeInUp element-animated ">
-            <a href="{{ blog.url | url }}" class="img-bg" style="background-image: url('images/img_2.jpg')">
+            <a href="{{ blog.url | url }}" class="img-bg" style="background-image:  url('{{ blog.backgroundImage | url }}')">
               <div class="text">
                 <span class="icon ion-ios-videocam"></span>
                 <h2>{{ blog.title }}</h2>
                 <p>Continue reading...</p>
+                                        
               </div>
             </a>
           </div>

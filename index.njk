@@ -199,7 +199,7 @@
             <h3 class="mb-4">Latest Blog</h3>
             <ul class="list-unstyled blog-entry-footer"> {% set counter = 0 %} {%- for blog in collections.all | eleventyNavigation("blog") %} {% if counter < 3 %} <li>
                 <a href="{{ blog.url | url}}">
-                  <span class="post-meta">{{ blog.page.date.toDateString()}}</span>
+                  <span class="post-meta">{{ blog.page.date}}</span>
                   <a href="{{ blog.url | url}}">
                     <h3>{{ blog.title }}</h3>
                   </a>

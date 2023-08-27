@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "postinstall": "patch-package",
     "start": "eleventy --serve",
     "build": "env NODE_ENV=production npx eleventy --pathprefix 'GlowToGoWebsite'"
   },
@@ -12,7 +13,8 @@
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
-    "@11ty/eleventy-navigation": "^0.3.5"
+    "@11ty/eleventy-navigation": "https://github.com/saoirselicious/eleventy-navigation/tree/master",
+    "patch-package": "^8.0.0"
   },
   "dependencies": {
     "@11ty/eleventy-img": "^3.0.0",

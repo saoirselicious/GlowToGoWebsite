@@ -8,7 +8,7 @@ permalink: "contact/testingLayer/index.html"
 
 {% include "_header.njk" %}
 
-    <section class="site-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url(images/big_image_1.jpg);">
+    <section class="site-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url(../../images/contact_us.jpg);">
       <div class="container">
         <div class="row align-items-center site-hero-inner justify-content-center">
           <div class="col-md-8 text-center">
@@ -32,19 +32,20 @@ permalink: "contact/testingLayer/index.html"
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <form action="#" method="post">
+            <form action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key" value="6a0d2b15-98dc-4bab-a988-680812178d56">
                   <div class="row">
                     <div class="col-md-4 form-group">
                       <label for="name">Name</label>
-                      <input type="text" id="name" class="form-control ">
+                      <input type="text" id="name" name ="name" class="form-control ">
                     </div>
                     <div class="col-md-4 form-group">
                       <label for="phone">Phone</label>
-                      <input type="text" id="phone" class="form-control ">
+                      <input type="text" id="phone" name ="phone" class="form-control ">
                     </div>
                      <div class="col-md-4 form-group">
                       <label for="email">Email</label>
-                      <input type="email" id="email" class="form-control ">
+                      <input type="email" id="email" name ="email" class="form-control ">
                     </div>
                   </div>
                    

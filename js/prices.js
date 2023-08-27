@@ -1,7 +1,8 @@
 //initSetup();
 
 let category ="Massage";
-
+console.log(document.getElementById("form_category"));
+const formControl = document.querySelector("#form_category");
 
 function showHideCatList(selectedButtonID) {
   console.log(selectedButtonID);
@@ -12,11 +13,17 @@ function showHideCatList(selectedButtonID) {
     document.getElementById("form_"+category).style.display = "none";
     document.getElementById(selectedButtonID.replace("form","ul")).style.display = "Block";
     category = selectedButtonID.replace("ul_","");
+    document.getElementById("displayCategory").src="images\\services\\"+category+".jpg"; 
+
+    console.log(formControl);
+    formControl.value = category
+    rerunSelectCat(category)
   }
 }
 
 function setOptionDetails(selectedOptionID) {
   console.log("setOptionDetails")
+  console.log(category);
   fetchJSON().then(json => {
     console.log(json[0][category]);
     removeAllChildNodes(document.getElementById("divOptionInfo"));
@@ -62,3 +69,8 @@ function rerunSelectCat(selectedCategory){
   category = selectedCategory.replace("form_", "");
 }
 
+async function fetchJSON(){
+  const response = await fetch("list.json");
+  const json = await response.json();
+  return json;
+}

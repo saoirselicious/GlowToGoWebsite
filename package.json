@@ -6,7 +6,6 @@
   "scripts": {
     "start": "eleventy --serve",
     "build": "env NODE_ENV=production npx eleventy --pathprefix 'GlowToGoWebsite'"
-
   },
   "keywords": [],
   "author": "",
@@ -16,6 +15,8 @@
     "@11ty/eleventy-navigation": "^0.3.5"
   },
   "dependencies": {
-    "@11ty/eleventy-img": "^3.0.0"
+    "@11ty/eleventy-img": "^3.0.0",
+    "cross-fetch": "^4.0.0",
+    "fetch": "^1.1.0"
   }
 }

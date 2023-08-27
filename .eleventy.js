@@ -25,6 +25,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("js");
+  eleventyConfig.addPassthroughCopy("_data");
   eleventyConfig.addPassthroughCopy("images");
   return {
     passthroughFileCopy: true

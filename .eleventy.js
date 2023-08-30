@@ -21,7 +21,7 @@ module.exports = function(eleventyConfig) {
     if (filePathStem.startsWith("/posts/"))
     {depth = 2}
   
-    else if (filePathStem.startsWith("/src/landingpage")) {
+    else if (filePathStem.startsWith("/src/bloghome")) {
       depth = filePathStem.split("/").length - 1;
     } else {
       depth = filePathStem.split("/").length - 2;

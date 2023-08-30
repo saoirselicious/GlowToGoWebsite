@@ -1,0 +1,301 @@
+
+{
+    "Massage": [
+        {
+            "Name": "Swedish Back Massage",
+            "Length": "30",
+            "Cost": "30",
+            "Add_Text": "Relax and unwind with a soothing 30-minute Swedish Back Massage, designed to ease tension and promote relaxation in your upper body."
+        },
+        {
+            "Name": "Swedish Back, Neck, Head & Shoulder Massage",
+            "Length": "45",
+            "Cost": "40",
+            "Add_Text": "Indulge in a 45-minute session that targets key areas of tension, offering relief to your back, neck, head, and shoulders."
+        },
+        {
+            "Name": "Swedish Full Body Massage",
+            "Length": "60",
+            "Cost": "50",
+            "Add_Text": "Experience ultimate relaxation with a 60-minute Swedish Full Body Massage, tailored to release stress and rejuvenate your entire body."
+        },
+        {
+            "Name": "Deep Tissue Back Massage",
+            "Length": "30",
+            "Cost": "35",
+            "Add_Text": "Enjoy a focused 30-minute Deep Tissue Back Massage, designed to alleviate deep-seated knots and tension in your back muscles."
+        },
+        {
+            "Name": "Deep Tissue Full Body Massage",
+            "Length": "60",
+            "Cost": "55",
+            "Add_Text": "Delve into relaxation with a 60-minute Deep Tissue Full Body Massage, addressing tension and providing deep muscle relief."
+        },
+        {
+            "Name": "Indian Head Massage",
+            "Length": "45",
+            "Cost": "35",
+            "Add_Text": "Rebalance your energy with a 45-minute Indian Head Massage, incorporating techniques to relax your head, neck, and scalp."
+        },
+        {
+            "Name": "Hot Coconut Oil Scalp Massage",
+            "Length": "30",
+            "Cost": "30",
+            "Add_Text": "Experience tranquility during a 30-minute Hot Coconut Oil Scalp Massage, combining warmth and nourishment for your scalp."
+        },
+        {
+            "Name": "Hot Stone Back Massage",
+            "Length": "30",
+            "Cost": "35",
+            "Add_Text": "Melt away stress with a 30-minute Hot Stone Back Massage, using heated stones to alleviate tension and promote relaxation."
+        },
+        {
+            "Name": "Hot Stone Full Body Massage",
+            "Length": "60",
+            "Cost": "55",
+            "Add_Text": "Immerse yourself in relaxation with a 60-minute Hot Stone Full Body Massage, where heated stones soothe your muscles from head to toe."
+        },
+        {
+            "Name": "Pregnancy Full Body Massage (Incl Scalp Massage)",
+            "Length": "60",
+            "Cost": "50",
+            "Add_Text": "Find comfort and relief with a 60-minute Pregnancy Full Body Massage, incorporating a soothing scalp massage for expectant mothers."
+        }
+    ],
+    "Osmosis Facials": [
+        {
+            "Name": "Osmosis Taster Facial",
+            "Length": "45",
+            "Cost": "50",
+            "Add_Text": "An introduction to Osmosis! This facial is designed speciﬁcally to your skin needs. Including cleanse, exfoliation, mask, and appropriate moisturizer this facial is perfect for all skin Types but especially for clients looking for a deep cleanse. Enioy a hot oil scalp massage while the mask works it's magic on your skin."
+        },
+        {
+            "Name": "Osmosis Revitapen Facial",
+            "Length": "65",
+            "Cost": "85",
+            "Add_Text": "Micro needling results without the abrasion of a needle! RevitaPen allows deeper penetration of Vitamin A, resulting in an increase of cellular activity leaving the skin smooth, plump and youthful. This is an amazing facial for any client wanting to achieve anti aging results. While penetrating Vitamin A deeper into the skin it also speeds up healing, prevents breakouts and supports the skin's immune system."
+        },
+        {
+            "Name": "Osmosis Custom Facial with Revitapen",
+            "Length": "65",
+            "Cost": "70",
+            "Add_Text": "/’Tailor-made’ to fit your individual skin needs! Using a combination of powder blends and serums from Osmosis (depending on your individual skin Type) this facial accomplishes a deep cleanse, exfoliation and hydration of your skin. The Osmosis RevitaPen is also used to ensure deeper product penetration. A skin consultation is also included to ensure accurate results."
+        }
+    ],
+    "Brows and Lashes": [
+        {
+            "Name": "Brow Shape",
+            "Cost": "12",
+            "Add_Text": "Define your brows with a precise Brow Shaping session, enhancing your natural arch and frame."
+        },
+        {
+            "Name": "Brow Tint",
+            "Cost": "10",
+            "Add_Text": "Elevate your brows with a Brow Tint, adding depth and color to enhance your overall look."
+        },
+        {
+            "Name": "Brow Shape and Tint",
+            "Cost": "20",
+            "Add_Text": "Combine the benefits of Brow Shaping and Tinting for beautifully defined and colored eyebrows."
+        },
+        {
+            "Name": "The Glow To Go Brow",
+            "Cost": "25",
+            "Add_Text": "Includes Brow Mapping, Tint, Wax, Tweeze & Trim"
+        },
+        {
+            "Name": "Lash Tint",
+            "Cost": "12",
+            "Add_Text":"Embrace darker lashes with a Lash Tinting session, enhancing your eyes effortlessly."
+        },
+        {
+            "Name": "Eye Trio",
+            "Cost": "30",
+            "Add_Text": "Brow Shape, Tint Ancl Eyelash Tint. Experience a full eye makeover with the Eye Trio package, including Brow Shaping, Brow Tinting, and Eyelash Tinting"
+        },
+        {
+            "Name": "Brow Pluck",
+            "Cost": "10",
+            "Add_Text": "Achieve precise brow grooming with expert Brow Plucking, enhancing your natural shape."
+        },
+        {
+            "Name": "Brow Lamination (Incl tint)",
+            "Cost": "45",
+            "Add_Text": "Elevate your brows to new heights with Brow Lamination, including tinting for a polished look."
+        },
+        {
+            "Name": "Lash Lift (Incl Tint)",
+            "Cost": "12",
+            "Add_Text": "Enjoy stunning lashes with a Lash Lift, including tinting, for a captivating and wide-eyed appearance. \n\n *Patch test required"
+        }
+    ],
+    "Waxing": [
+        {
+            "Name": "Eyebrow",
+            "Cost": "12",
+            "Add_Text": "Frame your face beautifully with a precise Eyebrow Waxing session, achieving a polished and defined look."
+        },
+        {
+            "Name": "Lip",
+            "Cost": "10",
+            "Add_Text": "Achieve smoothness and precision with Lip Waxing, keeping your upper lip area hair-free."
+        },
+        {
+            "Name": "Chin",
+            "Cost": "10",
+            "Add_Text": "Say goodbye to unwanted chin hair with Chin Waxing, ensuring a clean and sleek profile."
+        },
+        {
+            "Name": "Lip and Chin",
+            "Cost": "15",
+            "Add_Text": "Combine Lip and Chin Waxing for a comprehensive facial hair removal solution."
+        },
+        {
+            "Name": "Sides of Face",
+            "Cost": "12",
+            "Add_Text": "Experience a flawless facial appearance with Sides of Face Waxing, removing any unwanted hair for a sleek finish."
+        }
+    ],
+    "Spray Tans": [
+        {
+            "Name": "Cocktail Full Body Spray Tan",
+            "Cost": "20",
+            "Add_Text": "Shades: Light/Medium/Dark/Extra Dark \nFragrances: Cherry/Cocnut/Vanilla/Mango"
+        },
+        {
+            "Name": "Biabelle Full Body Spray Tan",
+            "Cost": "25",
+            "Add_Text": "Shades: Medium/Dark/Extra Dark"
+        },
+        {
+            "Name": "Bellamianta Full Body Spray Tan",
+            "Cost": "25",
+            "Add_Text": "Shades: Light/Medium/Dark"
+        }
+    ],
+    "Manicures & Pedicures": [
+        {
+            "Name": "File & Polish",
+            "Cost": "18",
+            "Add_Text": "Treat your nails to a quick refresh with a File & Polish session, ensuring a neat and polished appearance."
+        },
+        {
+            "Name": "Mini Manicure",
+            "Length": "25 ",
+            "Cost": "20",
+            "Add_Text": "Includes Cuticle Work And Nail Shape With Choice Of Colour"
+        },
+        {
+            "Name": "Glow To Go Exclusive Manicure",
+            "Cost": "35",
+            "Length": "45",
+            "Add_Text": "Includes Cuticle Work, Nail Shape, Massage, Heated Mitts & Choice Of Colour"
+        },
+        {
+            "Name": "SHELLAC MANICURE (Colour)",
+            "Cost": "25",
+            "Length": "40",
+            "Add_Text": "Elevate your nails with a Shellac Manicure in your preferred color, offering long-lasting shine and sophistication."
+        },
+        {
+            "Name": "SHELLAC MANICURE (French)",
+            "Cost": "28",
+            "Length": "50",
+            "Add_Text": "Embrace classic elegance with a Shellac French Manicure, combining timeless style with lasting vibrancy."
+        },
+        {
+            "Name": "Shellac Removal",
+            "Cost": "10 (Free With Reapplication)",
+            "Length": "15",
+            "Add_Text": "Add A Manicure Company Hydrating Hand Mask For An Extra\t6\nAdd A Protein Base For An Extra\t6"
+        },
+        {
+            "Name": "The Self Care Mani",
+            "Cost": "40",
+            "Length": "50",
+            "Add_Text": "Add Shellac\t5\nThe Ultimate Nail & Hand Care Treatment! Including A Biab Manicure Which Will Improve The Condition Of Your Natural Nails & Make Your Nails Grow While You Are Having The Biab Applied To Your Nails Enjoy A Manicure Company Moisture Repair Hydrating Hand Mask Full Cuticle Work & Nail Shape Is Included In This Treatment & Also I Apply The Opi Protective Hand, Nail & Cuticle Work To Your Hands And Cuticles"
+        },
+        {
+            "Name": "Biab Manicure",
+            "Cost": "30",
+            "Length": "40",
+            "Add_Text": "Add Shellac\t5 \nImproves the condition of your own natural nails & will help your own nails grow"
+        },
+        {
+            "Name": "Biab Manicure with Shellac",
+            "Cost": "35",
+            "Length": "50",
+            "Add_Text": "Combine the benefits of Biab and Shellac for durable and beautiful nails."
+        },
+        {
+            "Name": "Biab Manicure with Shellac (French)",
+            "Cost": "38",
+            "Length": "50",
+            "Add_Text": "Embrace classic elegance with a Shellac French Manicure, combining timeless style with lasting vibrancy."
+        },
+        {
+            "Name": "Biab Removal",
+            "Cost": "10",
+            "Length": "20",
+            "Add_Text": " Maintain the health of your nails with Shellac Removal, ensuring proper care during the removal process."
+        },
+        {
+            "Name": "Glow to Go Exclusive Pedicure",
+            "Cost": "45",
+            "Length": "50",
+            "Add_Text": "add Shellac\t10\nFull pedicure including soak, cuticle work, nail shape, exfoliation, dead skin removal , foot massage and choice of colour"
+        },
+        {
+            "Name": "Glow to Go Pedicure",
+            "Cost": "65",
+            "Length": "75",
+            "Add_Text": "add Shellac\t10\nFull pedicure including soak, cuticle work, nail shape, exfoliation, dead skin removal, heated booties,relaxing foot and leg massage, callus peel skin softener and choice of colour"
+        },
+        {
+            "Name": "Shellac Pedicure",
+            "Cost": "25",
+            "Length": "40",
+            "Add_Text": "50 mins \t28\nIncludes cuticle tidy, nail shape with choice of colour"
+        },
+        {
+            "Name": "Kiddies Paint",
+            "Cost": "10",
+            "Length": "20",
+            "Add_Text": "Treat the young ones to a fun and vibrant Kiddies Paint session, adding a splash of color to their nails."
+        }
+    ],
+    "Makeup": [
+        {
+            "Name": "Makeup Application",
+            "Type": "Makeup",
+            "Cost": "35",
+            "Add_Text": "Transform your look with a professional Makeup Application, enhancing your features for any occasion."
+        },
+        {
+            "Name": "Makeup Application (incl. lashes)",
+            "Type": "Makeup",
+            "Cost": "40",
+            "Add_Text": "Elevate your makeup with lashes included, creating a stunning and captivating appearance."
+        }
+    ],
+    "Packages": [
+        {
+            "Name": "Glow to Go Spa Indulgence Package",
+            "Cost": "70",
+            "Length": "85",
+            "Add_Text": "Experience the feeling of being in a Spa with this luxurious package. Includes a Swedish Full Body Massage and 0 Coconut Hot Oil Scalp Massage"
+        },
+        {
+            "Name": "Osmosis Face & Body Sensation",
+            "Cost": "65",
+            "Length": "60",
+            "Add_Text": "This instant pick-me-up package includes a 30 min Osmosis introduction facial focusing mainly on a deep cleanse and achieving radiant results for the skin. To experience full relaxation a 30 min Coconut Hot Oil Back Massage is also performed."
+        },
+        {
+            "Name": "All About You Package",
+            "Cost": "75",
+            "Length": "110",
+            "Add_Text": "This package is all about treating you! This treatment consists of a Glow To Go Exclusive Pedicure which includes foot soak, cuticle work, nail shape, exfoliation, dead skin removal, foot massage and choice of colour. Sit back and relax while you are being pampered in our luxurious pedicure chair. From here, you can take a seat at our Manicure station where you will be treated to a Shellac Manicure (colour) and a Glow To Go Cocktail Spray Tan (shade and fragrance of your choice) to finish. Perfect for those big nights out!"
+        }
+    ]
+}

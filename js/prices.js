@@ -1,8 +1,16 @@
 //initSetup();
 
 let category ="Massage";
+var formSelector = "form_" + category;
 console.log(document.getElementById("form_category"));
 const formControl = document.querySelector("#form_category");
+
+function removeAllChildNodes(parent) {
+  while (parent.firstChild) {
+    console.log("removeAllChildNodes");
+      parent.removeChild(parent.firstChild);
+  }
+}
 
 function showHideCatList(selectedButtonID) {
   console.log(selectedButtonID);
@@ -13,6 +21,7 @@ function showHideCatList(selectedButtonID) {
     document.getElementById("form_"+category).style.display = "none";
     document.getElementById(selectedButtonID.replace("form","ul")).style.display = "Block";
     category = selectedButtonID.replace("ul_","");
+    formSelector = "form_" + category;
     document.getElementById("displayCategory").src="images\\services\\"+category+".jpg"; 
 
     console.log(formControl);
@@ -22,33 +31,45 @@ function showHideCatList(selectedButtonID) {
 }
 
 function setOptionDetails(selectedOptionID) {
-  console.log("setOptionDetails")
-  console.log(category);
   fetchJSON().then(json => {
-    console.log(json[0][category]);
-    removeAllChildNodes(document.getElementById("divOptionInfo"));
+    removeAllChildNodes(document.getElementById("divOptionInfoMobile"));
+    removeAllChildNodes(document.getElementById("divOptionInfoDesktop"));
     let header = document.createElement("h3");
     let headerText = document.createTextNode(selectedOptionID);
     header.appendChild(headerText);
+    for (let i = 0; i < Object.keys(json[category.replace(/_/g, ' ')]).length; i++) {
+      if (json[category.replace(/_/g, ' ')][i]["Name"] == selectedOptionID) {
 
-    for (let i = 0; i < Object.keys(json[0][category]).length; i++) {
-      if (json[0][category][i]["Name"] == selectedOptionID) {
-        if (json[0][category][i].hasOwnProperty('Add_Text')) {
-          console.log(json[0][category][i]["Add_Text"]);
+        if (json[category.replace(/_/g, ' ')][i].hasOwnProperty('Add_Text')) {
           let para = document.createElement("a");
-          let paraText = document.createTextNode(json[0][category][i]["Add_Text"]);
+          let paraText = document.createTextNode(json[category.replace(/_/g, ' ')][i]["Add_Text"]);
           para.appendChild(paraText);
-          document.getElementById("divOptionInfo").appendChild(header);
-          document.getElementById("divOptionInfo").appendChild(para);
-          return;
+          document.getElementById("divOptionInfoMobile").appendChild(header.cloneNode(true));
+          document.getElementById("divOptionInfoMobile").appendChild(para.cloneNode(true));
+          document.getElementById("divOptionInfoDesktop").appendChild(header);
+          document.getElementById("divOptionInfoDesktop").appendChild(para);
+          if (json[category.replace(/_/g, ' ')][i].hasOwnProperty('Length')) {
+            let lengthTime = document.createElement("p");
+            let lengthTimeText = document.createTextNode("Length: " + json[category.replace(/_/g, ' ')][i]["Length"] + " minutes");
+            lengthTime.appendChild(lengthTimeText);
+            document.getElementById("divOptionInfoMobile").appendChild(lengthTime.cloneNode(true));
+            document.getElementById("divOptionInfoDesktop").appendChild(lengthTime);
+          }
         }
         else {
-          document.getElementById("divOptionInfo").appendChild(header);
-          return;
+          document.getElementById("divOptionInfoMobile").appendChild(header.cloneNode(true));
+          document.getElementById("divOptionInfoDesktop").appendChild(header);
+          if (json[category.replace(/_/g, ' ')][i].hasOwnProperty('Length')) {
+            let lengthTime = document.createElement("p");
+            let lengthTimeText = document.createTextNode("Length: " + json[category.replace(/_/g, ' ')][i]["Length"] + " minutes");
+            lengthTime.appendChild(lengthTimeText);
+            document.getElementById("divOptionInfoMobile").appendChild(lengthTime.cloneNode(true));
+            document.getElementById("divOptionInfoDesktop").appendChild(lengthTime);
+          }
         }
+        return;
       }
     }
-
   });
 }
 
@@ -67,10 +88,17 @@ function rerunSelectCat(selectedCategory){
   document.getElementById("form_"+category).style.display = "none";
   document.getElementById("form_"+selectedCategory).style.display = "Block";
   category = selectedCategory.replace("form_", "");
+  formSelector = "form_" + category;
+  showHideCatList("ul_"+category)
+
+  setOptionDetails(document.getElementById("form_"+category).value.replace(/_/g, ' '));
 }
 
 async function fetchJSON(){
-  const response = await fetch("list.json");
+  const response = await fetch("_data/list.json");
   const json = await response.json();
+  console.log(json);
   return json;
 }
+
+console.log("prices");

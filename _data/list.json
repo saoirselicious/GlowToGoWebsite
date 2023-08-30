@@ -4,57 +4,62 @@
         {
             "Name": "Swedish Back Massage",
             "Length": "30",
-            "Cost": "30"
+            "Cost": "30",
+            "Add_Text": "Relax and unwind with a soothing 30-minute Swedish Back Massage, designed to ease tension and promote relaxation in your upper body."
         },
         {
             "Name": "Swedish Back, Neck, Head & Shoulder Massage",
             "Length": "45",
-            "Cost": "40"
+            "Cost": "40",
+            "Add_Text": "Indulge in a 45-minute session that targets key areas of tension, offering relief to your back, neck, head, and shoulders."
         },
         {
             "Name": "Swedish Full Body Massage",
             "Length": "60",
-            "Cost": "50"
+            "Cost": "50",
+            "Add_Text": "Experience ultimate relaxation with a 60-minute Swedish Full Body Massage, tailored to release stress and rejuvenate your entire body."
         },
         {
             "Name": "Deep Tissue Back Massage",
             "Length": "30",
-            "Cost": "35"
+            "Cost": "35",
+            "Add_Text": "Enjoy a focused 30-minute Deep Tissue Back Massage, designed to alleviate deep-seated knots and tension in your back muscles."
         },
         {
             "Name": "Deep Tissue Full Body Massage",
             "Length": "60",
-            "Cost": "55"
+            "Cost": "55",
+            "Add_Text": "Delve into relaxation with a 60-minute Deep Tissue Full Body Massage, addressing tension and providing deep muscle relief."
         },
         {
             "Name": "Indian Head Massage",
             "Length": "45",
-            "Cost": "35"
+            "Cost": "35",
+            "Add_Text": "Rebalance your energy with a 45-minute Indian Head Massage, incorporating techniques to relax your head, neck, and scalp."
         },
         {
             "Name": "Hot Coconut Oil Scalp Massage",
             "Length": "30",
-            "Cost": "30"
+            "Cost": "30",
+            "Add_Text": "Experience tranquility during a 30-minute Hot Coconut Oil Scalp Massage, combining warmth and nourishment for your scalp."
         },
         {
             "Name": "Hot Stone Back Massage",
             "Length": "30",
-            "Cost": "35"
+            "Cost": "35",
+            "Add_Text": "Melt away stress with a 30-minute Hot Stone Back Massage, using heated stones to alleviate tension and promote relaxation."
         },
         {
             "Name": "Hot Stone Full Body Massage",
             "Length": "60",
-            "Cost": "55"
+            "Cost": "55",
+            "Add_Text": "Immerse yourself in relaxation with a 60-minute Hot Stone Full Body Massage, where heated stones soothe your muscles from head to toe."
         },
         {
             "Name": "Pregnancy Full Body Massage (Incl Scalp Massage)",
             "Length": "60",
-            "Cost": "50"
-        },
-        {
-            "Name": "Osmosis  Facials",
-            "Length": "30",
-            "Cost": "25"
+            "Cost": "50",
+            "Add_Text": "Find comfort and relief with a 60-minute Pregnancy Full Body Massage, incorporating a soothing scalp massage for expectant mothers."
         }
     ],
     "Osmosis Facials": [
@@ -80,15 +85,18 @@
     "Brows and Lashes": [
         {
             "Name": "Brow Shape",
-            "Cost": "12"
+            "Cost": "12",
+            "Add_Text": "Define your brows with a precise Brow Shaping session, enhancing your natural arch and frame."
         },
         {
             "Name": "Brow Tint",
-            "Cost": "10"
+            "Cost": "10",
+            "Add_Text": "Elevate your brows with a Brow Tint, adding depth and color to enhance your overall look."
         },
         {
             "Name": "Brow Shape and Tint",
-            "Cost": "20"
+            "Cost": "20",
+            "Add_Text": "Combine the benefits of Brow Shaping and Tinting for beautifully defined and colored eyebrows."
         },
         {
             "Name": "The Glow To Go Brow",
@@ -97,47 +105,55 @@
         },
         {
             "Name": "Lash Tint",
-            "Cost": "12"
+            "Cost": "12",
+            "Add_Text":"Embrace darker lashes with a Lash Tinting session, enhancing your eyes effortlessly."
         },
         {
             "Name": "Eye Trio",
             "Cost": "30",
-            "Add_Text": "Brow Shape, Tint Ancl Eyelash Tint"
+            "Add_Text": "Brow Shape, Tint Ancl Eyelash Tint. Experience a full eye makeover with the Eye Trio package, including Brow Shaping, Brow Tinting, and Eyelash Tinting"
         },
         {
             "Name": "Brow Pluck",
-            "Cost": "10"
+            "Cost": "10",
+            "Add_Text": "Achieve precise brow grooming with expert Brow Plucking, enhancing your natural shape."
         },
         {
             "Name": "Brow Lamination (Incl tint)",
-            "Cost": "45"
+            "Cost": "45",
+            "Add_Text": "Elevate your brows to new heights with Brow Lamination, including tinting for a polished look."
         },
         {
             "Name": "Lash Lift (Incl Tint)",
             "Cost": "12",
-            "Add_Text": "*Patch test required"
+            "Add_Text": "Enjoy stunning lashes with a Lash Lift, including tinting, for a captivating and wide-eyed appearance. \n\n *Patch test required"
         }
     ],
     "Waxing": [
         {
             "Name": "Eyebrow",
-            "Cost": "12"
+            "Cost": "12",
+            "Add_Text": "Frame your face beautifully with a precise Eyebrow Waxing session, achieving a polished and defined look."
         },
         {
             "Name": "Lip",
-            "Cost": "10"
+            "Cost": "10",
+            "Add_Text": "Achieve smoothness and precision with Lip Waxing, keeping your upper lip area hair-free."
         },
         {
             "Name": "Chin",
-            "Cost": "10"
+            "Cost": "10",
+            "Add_Text": "Say goodbye to unwanted chin hair with Chin Waxing, ensuring a clean and sleek profile."
         },
         {
             "Name": "Lip and Chin",
-            "Cost": "15"
+            "Cost": "15",
+            "Add_Text": "Combine Lip and Chin Waxing for a comprehensive facial hair removal solution."
         },
         {
             "Name": "Sides of Face",
-            "Cost": "12"
+            "Cost": "12",
+            "Add_Text": "Experience a flawless facial appearance with Sides of Face Waxing, removing any unwanted hair for a sleek finish."
         }
     ],
     "Spray Tans": [
@@ -160,7 +176,8 @@
     "Manicures & Pedicures": [
         {
             "Name": "File & Polish",
-            "Cost": "18"
+            "Cost": "18",
+            "Add_Text": "Treat your nails to a quick refresh with a File & Polish session, ensuring a neat and polished appearance."
         },
         {
             "Name": "Mini Manicure",
@@ -177,12 +194,14 @@
         {
             "Name": "SHELLAC MANICURE (Colour)",
             "Cost": "25",
-            "Length": "40"
+            "Length": "40",
+            "Add_Text": "Elevate your nails with a Shellac Manicure in your preferred color, offering long-lasting shine and sophistication."
         },
         {
             "Name": "SHELLAC MANICURE (French)",
             "Cost": "28",
-            "Length": "50"
+            "Length": "50",
+            "Add_Text": "Embrace classic elegance with a Shellac French Manicure, combining timeless style with lasting vibrancy."
         },
         {
             "Name": "Shellac Removal",
@@ -205,17 +224,20 @@
         {
             "Name": "Biab Manicure with Shellac",
             "Cost": "35",
-            "Length": "50"
+            "Length": "50",
+            "Add_Text": "Combine the benefits of Biab and Shellac for durable and beautiful nails."
         },
         {
             "Name": "Biab Manicure with Shellac (French)",
             "Cost": "38",
-            "Length": "50"
+            "Length": "50",
+            "Add_Text": "Embrace classic elegance with a Shellac French Manicure, combining timeless style with lasting vibrancy."
         },
         {
             "Name": "Biab Removal",
             "Cost": "10",
-            "Length": "20"
+            "Length": "20",
+            "Add_Text": " Maintain the health of your nails with Shellac Removal, ensuring proper care during the removal process."
         },
         {
             "Name": "Glow to Go Exclusive Pedicure",
@@ -238,19 +260,22 @@
         {
             "Name": "Kiddies Paint",
             "Cost": "10",
-            "Length": "20"
+            "Length": "20",
+            "Add_Text": "Treat the young ones to a fun and vibrant Kiddies Paint session, adding a splash of color to their nails."
         }
     ],
     "Makeup": [
         {
             "Name": "Makeup Application",
             "Type": "Makeup",
-            "Cost": "35"
+            "Cost": "35",
+            "Add_Text": "Transform your look with a professional Makeup Application, enhancing your features for any occasion."
         },
         {
             "Name": "Makeup Application (incl. lashes)",
             "Type": "Makeup",
-            "Cost": "40"
+            "Cost": "40",
+            "Add_Text": "Elevate your makeup with lashes included, creating a stunning and captivating appearance."
         }
     ],
     "Packages": [

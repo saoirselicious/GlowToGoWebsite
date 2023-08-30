@@ -4,77 +4,69 @@
       <div class="col-md-6">
         <h3 class="mb-4">About</h3>
         <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, quod!</p>
-        <ul >
+        <ul class="list-unstyled ">
           <li class="d-flex">
             <span class="mr-3">
               <span class="icon ion-ios-location"></span>
             </span>
-            <span class="">Unit 4 on 2nd Floor, <br>  Abey House, Abbey Lane, <br> Arklow, <br>Co. Wicklow</span>
+            <span class="">Unit 4, <br> on 2nd Floor, Abey House, <br> Abbey Lane <br>Arklow, <br>Co. Wicklow </span>
           </li>
           <li class="d-flex">
             <span class="mr-3">
-              <span class="icon ion-ios-telephone"></span></span>
-            <span class="">+353
-              87 676 1443</span></li>
+              <span class="icon ion-ios-telephone"></span>
+            </span>
+            <span class="">+353 87 676 1443</span>
+          </li>
           <li class="d-flex">
             <span class="mr-3">
-              <span class="icon ion-email"></span></span>
-            <span
-              class="">info@yourdomain.com</span></li>
+              <span class="icon ion-email"></span>
+            </span>
+            <span class="">info@yourdomain.com</span>
+          </li>
         </ul>
       </div>
       <div class="col-md-3">
         <h3 class="mb-4">Latest Blog</h3>
-        <ul class="list-unstyled blog-entry-footer">
-          {% set counter = 0 %}
-          {%- for blog in collections.all | eleventyNavigation("blog") %}
-            {% if counter < 3 %}
-              <li>
-                <a href="{{ blog.url | url}}">
-                  <span class="post-meta">21st October 2023</span>
-                  <a href="{{ blog.url | url}}">
-                    <h3>{{ blog.title }}</h3>
-                  </a>
-                </li>
-                {% set counter = counter + 1 %}
-              {% endif %}
-            {%- endfor -%}
-          </ul>
-        </div>
-        <div class="col-md-3">
-          <h3>Connect</h3>
-          <p>
-            <a class="p-2" src="https://www.facebook.com/GlowToGoByCiara/">
-              <span class="fa fa-facebook"></span></a>
-            <a class="p-2" src="https://www.instagram.com/glowtogobyciara/?hl=en">
-              <span
-              class="fa fa-instagram"></span></a>
-          </p>
-        </div>
+        <ul class="list-unstyled blog-entry-footer"> {% set counter = 0 %} {%- for blog in collections.all | eleventyNavigation("blog") %} {% if counter < 3 %} <li>
+            <a href="{{ blog.url | url}}">
+              <span class="post-meta">{{ blog.page.date.toDateString()}}</span>
+              <a href="{{ blog.url | url}}">
+                <h3>{{ blog.title }}</h3>
+              </a>
+          </li> {% set counter = counter + 1 %} {% endif %} {%- endfor -%} </ul>
       </div>
-      <div class="row justify-content-center">
-        <div class="col-md-7 text-center">
-          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-        Copyright &copy;
-        <script>
-            document.write(new Date().getFullYear());
-          </script> All rights reserved | This template is made with
-        <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com"
-          target="_blank">Colorlib</a>
-          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-        </div>
+      <div class="col-md-3">
+        <h3>Connect</h3>
+        <p>
+          <a class="p-2" target="_blank" href="https://www.facebook.com/GlowToGoByCiara/">
+            <i class="fa fa-facebook" ></i>
+          </a>
+          <a class="p-2" target="_blank" href="https://www.instagram.com/glowtogobyciara/?hl=en">
+            <i class="fa fa-instagram" ></i>
+          </a>
+        </p>
       </div>
     </div>
-  </footer>
-  <!-- END footer -->
+    <div class="row justify-content-center">
+      <div class="col-md-7 text-center">
+        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.  Copyright &copy;-->
+        <script>
+          document.write(new Date().getFullYear());
+        </script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- END footer -->
 
-  <script src="../../js/jquery-3.2.1.min.js"></script>
-  <script src="../../js/jquery-migrate-3.0.0.js"></script>
-  <script src="../../js/popper.min.js"></script>
-  <script src="../../js/bootstrap.min.js"></script>
-  <script src="../../js/owl.carousel.min.js"></script>
-  <script src="../../js/jquery.waypoints.min.js"></script>
-  <script src="../../js/jquery.stellar.min.js"></script>
-  <script src="../../js/jquery.magnific-popup.min.js"></script>
-  <script src="../../js/magnific-popup-options.js"></script>
-  <script src="../../js/main.js"></script>
+<script src="{{ page.filePathStem | calculateFileDepth }}js/jquery-3.2.1.min.js"></script>
+<script src="{{ page.filePathStem | calculateFileDepth }}js/jquery-migrate-3.0.0.js"></script>
+<script src="{{ page.filePathStem | calculateFileDepth }}js/popper.min.js"></script>
+<script src="{{ page.filePathStem | calculateFileDepth }}js/bootstrap.min.js"></script>
+<script src="{{ page.filePathStem | calculateFileDepth }}js/owl.carousel.min.js"></script>
+<script src="{{ page.filePathStem | calculateFileDepth }}js/jquery.waypoints.min.js"></script>
+<script src="{{ page.filePathStem | calculateFileDepth }}js/jquery.stellar.min.js"></script>
+<script src="{{ page.filePathStem | calculateFileDepth }}js/jquery.magnific-popup.min.js"></script>
+<script src="{{ page.filePathStem | calculateFileDepth }}js/magnific-popup-options.js"></script>
+<script src="{{ page.filePathStem | calculateFileDepth }}js/main.js"></script>

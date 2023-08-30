@@ -22,7 +22,9 @@ function showHideCatList(selectedButtonID) {
     document.getElementById(selectedButtonID.replace("form","ul")).style.display = "Block";
     category = selectedButtonID.replace("ul_","");
     formSelector = "form_" + category;
-    document.getElementById("displayCategory").src="images\\services\\"+category+".jpg"; 
+
+    document.getElementById("imageWeb").src="images\\services\\"+category.toLowerCase()+".jpg"; 
+    document.getElementById("imageMobile").src="images\\services\\"+category.toLowerCase()+".jpg"; 
 
     console.log(formControl);
     formControl.value = category
@@ -89,7 +91,10 @@ function rerunSelectCat(selectedCategory){
   document.getElementById("form_"+selectedCategory).style.display = "Block";
   category = selectedCategory.replace("form_", "");
   formSelector = "form_" + category;
-  showHideCatList("ul_"+category)
+  showHideCatList("ul_"+category);
+
+  document.getElementById("imageWeb").src="images\\services\\"+category.toLowerCase()+".jpg"; 
+  document.getElementById("imageMobile").src="images\\services\\"+category.toLowerCase()+".jpg";
 
   setOptionDetails(document.getElementById("form_"+category).value.replace(/_/g, ' '));
 }

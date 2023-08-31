@@ -24,7 +24,7 @@ pageName: "Homepage"
     <section class="site-sectionW">
       <div class="container show-mobile d-lg-none">
         <div class="row">
-          <select class="form-control" id="form_category"> 
+          <select class="form-control form-select form-select-lg" id="form_category"> 
             {% for key in listofKeys -%} 
             <option value="{{key | replace(" ", "_")}}">
               {{key}}</option> 
@@ -33,9 +33,9 @@ pageName: "Homepage"
            {% for key in listofKeys -%} 
             {% set currentKey = key %} 
             {% if currentKey == listofKeys[0] %} 
-            <select class="form-control" id="form_{{key | replace(" ", "_")}}" onchange="setOptionDetails(form_{{key | replace(" ", "_")}}.value.replace(/_/g, ' '))"> 
+            <select class="form-control form-select form-select-lg" id="form_{{key | replace(" ", "_")}}" onchange="setOptionDetails(form_{{key | replace(" ", "_")}}.value.replace(/_/g, ' '))"> 
             {% else %} 
-            <select class="form-control" id="form_{{key | replace(" ", "_")}}" style="display: none;" onchange="setOptionDetails(form_{{key | replace(" ", "_")}}.value.replace(/_/g, ' '));"> 
+            <select class="form-control form-select form-select-lg" id="form_{{key | replace(" ", "_")}}" style="display: none;" onchange="setOptionDetails(form_{{key | replace(" ", "_")}}.value.replace(/_/g, ' '));"> 
             {% endif -%} 
             {% for value in list[currentKey] -%} 
               <option value="{{value.Name | replace(" ", "_")}}" >
@@ -45,6 +45,7 @@ pageName: "Homepage"
           </select>
           {% endfor -%}
         </div>
+        <br>
         <div class="row">
           <div class="media d-block media-feature text-center" id="">
             <img class="img-fluid" id="imageMobile" width() src="{{'images/back_massage.jpg'|url}}">

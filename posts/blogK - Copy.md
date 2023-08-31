@@ -5,7 +5,7 @@ layout: blogLayout.njk
 date: 2016-01-01
 tags: bloging
 
-backgroundImage: ../../images/post-bg.jpg
+backgroundImage: ../../images/posts/post-bg.jpg
 eleventyNavigation:
     key: Post K
     parent: blog

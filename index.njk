@@ -25,15 +25,17 @@ pageName: "Homepage"
       <div class="container show-mobile d-lg-none">
         <div class="row">
           <select class="form-control" id="form_category"> 
-            {% for key in listofKeys -%} <option value="{{key | replace(" ", "_")}}">
+            {% for key in listofKeys -%} 
+            <option value="{{key | replace(" ", "_")}}">
               {{key}}</option> 
             {% endfor -%}
            </select> 
            {% for key in listofKeys -%} 
             {% set currentKey = key %} 
             {% if currentKey == listofKeys[0] %} 
-            <select class="form-control" id="form_{{key | replace(" ", "_")}}" onchange="setOptionDetails(form_{{key}}.value.replace(/_/g, ' '))"> 
-            {% else %} <select class="form-control" id="form_{{key | replace(" ", "_")}}" style="display: none;" onchange="setOptionDetails(form_{{key}}.value.replace(/_/g, ' '))";> 
+            <select class="form-control" id="form_{{key | replace(" ", "_")}}" onchange="setOptionDetails(form_{{key | replace(" ", "_")}}.value.replace(/_/g, ' '))"> 
+            {% else %} 
+            <select class="form-control" id="form_{{key | replace(" ", "_")}}" style="display: none;" onchange="setOptionDetails(form_{{key | replace(" ", "_")}}.value.replace(/_/g, ' '));"> 
             {% endif -%} 
             {% for value in list[currentKey] -%} 
               <option value="{{value.Name | replace(" ", "_")}}" >
@@ -57,6 +59,7 @@ pageName: "Homepage"
         </div>
       </div>
       </div>
+      <!--Web-->
       <div class="container hidden-mobile d-none d-lg-block">
         <div class="row">
           <div class="col-12">

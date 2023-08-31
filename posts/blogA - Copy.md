@@ -3,12 +3,12 @@ heading: "Man must explore, and this is exploration at its greatest"
 subheading: "Problems look mighty small from 150 miles up"
 layout: blogLayout.njk
 date: 2016-01-01
-backgroundImage: ../../images/post-bg.jpg
+backgroundImage: ../../images/posts/post-bg.jpg
 tags: bloging
 
 eleventyNavigation:
     key: A post about music
-    previewImage: ../../images/post-bg.jpg
+    previewImage: ../../images/posts/post-bg.jpg
     parent: blog
 
 ---

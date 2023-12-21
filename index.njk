@@ -1,126 +1,187 @@
----
-
-pageName: "Homepage"
-
----
-  <script src="js/prices.js" defer></script>
+--- 
+pageName: "Homepage" 
+--- 
+<script src="js/prices.js" defer></script> 
 {% include "_header.njk" %}
-    <section class="site-hero overlay" data-stellar-background-ratio="0.5" style="background-image:  url('images/main.jpg')">
-      <div class="container">
-        <div class="row align-items-center site-hero-inner justify-content-center">
-          <div class="col-md-8 text-center">
-            <div class="mb-5 element-animate">
-              <img src="{{'images/banner_text_1.png'|url}}" alt="Image placeholder" class="img-md-fluid">
-            </div>
-          </div>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/swiper-bundle.min.css" />
+<link rel="stylesheet" href="css/swiperControls.css" />
+<section class="site-hero overlay" data-stellar-background-ratio="0.5" style="background-image:  url('images/main.jpg')">
+  <div class="container">
+    <div class="row align-items-center site-hero-inner justify-content-center">
+      <div class="col-md-8 text-center">
+        <div class="mb-5 element-animate">
+          <img src="{{'images/banner_text_1.png'|url}}" alt="Image placeholder" class="img-md-fluid">
         </div>
       </div>
-    </section>
-    <!-- END section --> {% include "infoText.njk" %} {% set listofKeys = []-%} {% for key, keyArray in list -%} {% set listofKeys = (listofKeys.push(key), listofKeys) %} {% endfor -%}
-    <!-- END section -->
-    <br>
-    <br>
-    <!-- MOBILE -->
-    <section class="site-sectionW">
-      <div class="container show-mobile d-lg-none">
-        <div class="row">
-          <select class="form-control form-select form-select-lg" id="form_category"> 
-            {% for key in listofKeys -%} 
-            <option value="{{key | replace(" ", "_")}}">
-              {{key}}</option> 
+    </div>
+  </div>
+</section>
+<!-- END section --> 
+
+{% include "infoText.njk" %} 
+{% set listofKeys = []-%} 
+  {% for key, keyArray in list -%} 
+    {% set listofKeys = (listofKeys.push(key), listofKeys) %} 
+  {% endfor -%}
+
+<!-- END section -->
+<br>
+<br>
+
+<!-- MOBILE -->
+<section>
+  <div class="container show-mobile d-lg-none" style="line-height: 0.5;">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="h2 text-center">Our Services</h2>
+        <p class="text-muted text-center small">(Swipe below to see more options)</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <div class="swiper swiper-horizontal bg-light">
+          <div class="swiper-wrapper"> 
+            {% for key in listofKeys -%}
+              <button class="swiper-slide btn text-wrap" style="padding: 0px" id="form_category" onclick="rerunSelectCat('{{key.toLowerCase() | replace(" ", "_")}}')">
+                <img src="images/icons/{{key.toLowerCase() | replace(" ", "_")}}.png" alt="Massage">
+                <p class="text-wrap">{{key}}</p>
+              </button> 
             {% endfor -%}
-           </select> 
-           {% for key in listofKeys -%} 
-            {% set currentKey = key %} 
-            {% if currentKey == listofKeys[0] %} 
-            <select class="form-control form-select form-select-lg" id="form_{{key | replace(" ", "_")}}" onchange="setOptionDetails(form_{{key | replace(" ", "_")}}.value.replace(/_/g, ' '))"> 
-            {% else %} 
-            <select class="form-control form-select form-select-lg" id="form_{{key | replace(" ", "_")}}" style="display: none;" onchange="setOptionDetails(form_{{key | replace(" ", "_")}}.value.replace(/_/g, ' '));"> 
-            {% endif -%} 
-            {% for value in list[currentKey] -%} 
-              <option value="{{value.Name | replace(" ", "_")}}" >
-                {{value.Name}} (€{{value.Cost}})
-               </option>
-          {% endfor -%} 
-          </select>
-          {% endfor -%}
-        </div>
-        <br>
-        <div class="row">
-          <div class="media d-block media-feature text-center" id="">
-            <img class="img-fluid" id="imageMobile" width() src="{{'images/back_massage.jpg'|url}}">
-            <br>
-            <br>
-            <div id="divOptionInfoMobile">
-              <h3>Swedish Back, Neck, Head & Shoulder Massage</h3>
-              <p>Relax and unwind with a soothing 30-minute Swedish Back Massage, designed to ease tension and promote relaxation in your upper body.</p>
-              <p>Length: 30 minutes</p>
-            </div>
+          </div>
+          <div class="swiper-scrollbar swiper-scrollbar-horizontal" style="opacity: 0; transition-duration: 400ms;">
+            <div class="swiper-scrollbar-drag" style="transform: translate3d(0px, 0px, 0px); width: 69.4444px;"></div>
           </div>
         </div>
       </div>
-      </div>
-      <!--Web-->
-      <div class="container hidden-mobile d-none d-lg-block">
-        <div class="row">
-          <div class="col-12">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-              <ul class="navbar-nav mr-auto" id="categoryList"> {% for key in listofKeys -%} <li class="nav-item">
-                  <button class="btn nav-link shadow-none" id="Btn_{{key | replace(" ", "_")}}" onclick="showHideCatList('ul_{{key | replace(" ", "_")}}')">{{key}}</button>
-                </li> {% endfor -%} </ul>
-            </nav>
-          </div>
-        </div>
-      </div>
-      <br>
-      <br>
-      <div class="container hidden-mobile d-none d-lg-block">
-        <div class="row">
-          <div class="col-md-5">
-            <div class="media-body d-block media-feature">
-              <div class="row justify-content-center">
-                <div id="divOptions" class="w-100"> {% for key in listofKeys -%} {% set currentKey = key %} {% if currentKey == listofKeys[0] %} <ul class="nav" id="ul_{{currentKey | replace(" ", "_")}}" style="display: block;"> {% else %} <ul class="nav" id="ul_{{currentKey | replace(" ", "_")}}" style="display: none;"> {% endif %} {% for value in list[key] -%} <li class="nav-item">
-                        <div class="nav-link d-flex justify-content-between" style="margin-left:5px;">
-                          <a href="#/" onclick="setOptionDetails('{{value.Name}}')" style="max-width:75%;">{{value.Name}}</a>
-                          <div style="max-width:75%;"> €{{value.Cost}}
-                          </div>
-                        </div>
-                      </li> {% endfor -%} </ul> {% endfor -%}
-                    <!--<li class="nav-item"><div class = "nav-link d-flex justify-content-between"><a href="#">Here</a><div> $200 </div></div></li>-->
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-7">
-            <div class="media d-block media-feature text-center" id="">
-              <img class="img-fluid" id="imageWeb" width() src="{{'images/back_massage.jpg'|url}}">
-              <br>
-              <br>
-              <div id="divOptionInfoDesktop">
-              <h3>Swedish Back, Neck, Head & Shoulder Massage</h3>
-              <p>Relax and unwind with a soothing 30-minute Swedish Back Massage, designed to ease tension and promote relaxation in your upper body.</p>
-              <p>Length: 30 minutes</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section-cover cta" data-stellar-background-ratio="0.5" style="background-image: url('images/big_image_2.jpg')">
-      <div class="container">
-        <div class="row justify-content-center align-items-center intro">
-          <div class="col-md-8">
-            <h2 class="mb-4">
-              <span>Appoint a Haircut Today and</span> Get 25% discount
-            </h2>
-            <p>
-              <a class="btn btn-black">Make an Appointment</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+    </div>
     
-    <!-- END section -->
-    {% include "_footer.njk" %}
-  </body>
+    <br>
+
+    <div class="row">
+      <div class="col-12">
+        <br>
+        <p class="text-muted text-center small">(Click dropdown to see more options)</p> 
+        {% for key in listofKeys -%} 
+          {% set currentKey = key %} 
+          {% if currentKey == listofKeys[0] %} 
+            <select class="form-control form-select form-select-lg" id="form_{{key.toLowerCase() | replace(" ", "_")}}" onchange="setOptionDetails(form_{{key.toLowerCase() | replace(" ", "_")}}.value.replace(/_/g, ' '))"> 
+          {% else %} 
+            <select class="form-control form-select form-select-lg" id="form_{{key.toLowerCase() | replace(" ", "_")}}" style="display: none;" onchange="setOptionDetails(form_{{key.toLowerCase() | replace(" ", "_")}}.value.replace(/_/g, ' '));"> 
+          {% endif -%} 
+          {% for value in list[currentKey] -%} 
+            <option value="{{value.Name | replace(" ", "_")}}"> {{value.Name}} (€{{value.Cost}}) </option> 
+          {% endfor -%} </select> 
+        {% endfor -%}
+      </div>
+    </div>
+
+    <br>
+
+    <div class="row" style="line-height: 1;">
+      <div class="col-12">
+        <div class="media d-block media-feature text-center" id="">
+          <img class="img-fluid" id="imageMobile" width() src="{{'images/back_massage.jpg'|url}}">
+          
+          <br>
+          <br>
+
+          <div id="divOptionInfoMobile">
+            <h3>Swedish Back, Neck, Head & Shoulder Massage</h3>
+            <p>Relax and unwind with a soothing 30-minute Swedish Back Massage, designed to ease tension and promote relaxation in your upper body.</p>
+            <p>Length: 30 minutes</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!--Web-->
+  <div class="container hidden-mobile d-none d-lg-block">
+    <div class="row justify-content-md-center">
+      <div class="col-12">
+        <h2 class="h2 text-center">Our Services</h2>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-11">
+        <div class="swiper mySwiper swiper-initialized swiper-horizontal swiper-backface-hidden media-body d-block media-feature">
+          <div class="swiper-wrapper" id="swiper-wrapper-80b0592a111013638" aria-live="polite"> 
+            {% for key in listofKeys -%} 
+              <button class="swiper-slide btn" onclick="showHideCatList('{{key.toLowerCase() | replace(" ", "_")}}')">
+                <img src="images/icons/{{key.toLowerCase() | replace(" ", "_")}}.png" alt="Massage">
+                <p>{{key}}</p>
+              </button> {% endfor -%} </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="row">
+      <div class="col-5">
+        <div class="media-body d-block media-feature">
+          <div class="row justify-content-center">
+            <div id="divOptions" class="w-100"> 
+              {% for key in listofKeys -%} 
+                {% set currentKey = key %} 
+                {% if currentKey == listofKeys[0] %} 
+                  <ul class="nav" id="ul_{{currentKey.toLowerCase() | replace(" ", "_")}}" style="display: block;"> 
+                {% else %}
+                  <ul class="nav" id="ul_{{currentKey.toLowerCase() | replace(" ", "_")}}" style="display: none;"> 
+                {% endif %} 
+                  {% for value in list[key] -%} 
+                    <li class="nav-item">
+                      <div class="nav-link d-flex justify-content-between" style="margin-left:5px;">
+                        <a href="#/" onclick="setOptionDetails('{{value.Name}}')" style="max-width:75%;">{{value.Name}}</a>
+                        <div style="max-width:75%;"> €{{value.Cost}} </div>
+                      </div>
+                    </li> 
+                  {% endfor -%} 
+                  </ul> 
+              {% endfor -%}
+                <!--<li class="nav-item"><div class = "nav-link d-flex justify-content-between"><a href="#">Here</a><div> $200 </div></div></li>-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-7">
+        <div class="media d-block media-feature text-center" id="">
+          <img class="img-fluid" id="imageWeb" width() src="{{'images/back_massage.jpg'|url}}">
+          
+          <br>
+          <br>
+          
+          <div id="divOptionInfoDesktop">
+            <h3>Swedish Back, Neck, Head & Shoulder Massage</h3>
+            <p>Relax and unwind with a soothing 30-minute Swedish Back Massage, designed to ease tension and promote relaxation in your upper body.</p>
+            <p>Length: 30 minutes</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-cover cta" data-stellar-background-ratio="0.5" style="background-image: url('images/big_image_2.jpg')">
+  <div class="container">
+    <div class="row justify-content-center align-items-center intro">
+      <div class="col-md-8">
+        <h2 class="mb-4">
+          <span>Appoint a Haircut Today and</span> Get 25% discount
+        </h2>
+        <p>
+          <a class="btn btn-black">Make an Appointment</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END section --> 
+{% include "_footer.njk" %} 
+<script src="js/swiper-bundle.min.js"></script>
+<script src="js/swiperControls.js"></script>
+</body>

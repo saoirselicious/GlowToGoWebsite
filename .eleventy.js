@@ -1,5 +1,5 @@
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
-
+const { DateTime } = require("luxon");
 
 const fs = require('fs');
 // clear site on initial build
@@ -11,6 +11,10 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.setNunjucksEnvironmentOptions({
     throwOnUndefined: true,
     autoescape: false, // warning: don’t do this!
+  });
+
+  eleventyConfig.addFilter("readableDate", dateObj => {
+    return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("dd LLL yyyy");
   });
 
   eleventyConfig.addFilter("calculateFileDepth", function(filePathStem) {

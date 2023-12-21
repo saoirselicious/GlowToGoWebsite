@@ -1,13 +1,65 @@
 
  {% include "_header.njk" %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+ <style> 
+    .portfolio-menu{
+    	text-align:center;
+    }
+    .portfolio-item .item{
+    	float:left;
+    	margin-bottom:10px;
+    }
+   .lightbox-gallery{
+      background-repeat: no-repeat;
+      color: #000;overflow-x: hidden
+      }
+      
+   .lightbox-gallery p{
+      color:#fff
+   }
+   
+   .lightbox-gallery h2{
+      font-weight:bold;
+      margin-bottom:40px;
+      padding-top:40px;
+      color:#fff
+   }
+   @media (max-width:767px){
+      .lightbox-gallery h2{
+         margin-bottom:25px;
+         padding-top:25px;
+         font-size:24px;
+      }
+   }
+   .lightbox-gallery .intro{
+      font-size:16px;
+      max-width:500px;
+      margin:0 auto 40px;
+   }
+   .lightbox-gallery .intro p{
+   margin-bottom:0
+   }
+   
+   .lightbox-gallery .photos{
+      padding-bottom:20px
+   }
+   
+   .lightbox-gallery .item{
+      padding-bottom:30px
+   }
+
+   .img-fluid{
+      border: 2px solid #555;
+   }
+</style>
 
 <section class="site-section" class="mb-7" style="background-image: url('{{ backgroundImage }}')">
     <div class="container">
-        <div class="ow justify-content-center align-items-center intro">
+        <div class="row justify-content-center align-items-center intro text-light">
             <div class="col-md-12">
                 <div class="post-heading">
-                    <h1>{{ heading }}</h1>
-                    <h2 class="subheading">{{ subheading }}</h2>
+                    <h1 class="text-light">{{ heading }}</h1>
+                    <h2 class="text-light subheading">{{ subheading }}</h2>
                     <span class="meta">
                         Posted by
                         <a href="#!">Start Bootstrap</a>
@@ -22,14 +74,43 @@
 
 <section class="site-section">
     <div class="container">
-      <div class="row">
-        <div class="media-body d-block media-feature">
-        <div class="col-12">
-            {{ content | safe }}
+        <div class="row">
+            <div class="media-body d-block media-feature">
+                <div class="col-12">
+                    {{ content | safe }}
+                </div>
             </div>
-        </div>
         </div>
     </div>
 </section>
- {% include "_footer.njk" %}
 
+{% if contentImages %}
+<section>
+   <div class="container media-body d-block media-feature">
+      <div class="row">
+         <div class="col-12">
+            <div class="intro">
+               <h2 class="text-center">Image Gallery</h2>
+               <br>
+            </div>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-12 lightbox-gallery">
+            <div class="row photos">
+               {% for image in contentImages %}
+                  <div class="col-md-6 col-lg-4 col-xl-3 item">
+                     <a href="{{ image }}" data-lightbox="photos">
+                        <img class="img-fluid" src="{{ image }}">
+                     </a>
+                  </div>
+               {% endfor %}
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+{% endif %}
+
+ {% include "_footer.njk" %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>

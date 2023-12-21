@@ -4,6 +4,12 @@ subheading: "Problems look mighty small from 150 miles up"
 layout: blogLayout.njk
 date: 2016-01-01
 backgroundImage: ../../images/posts/post-bg.jpg
+contentImages: 
+  - "https://i.imgur.com/zmzERpe.jpg"
+  - "https://i.imgur.com/zmzERpe.jpg"
+  - "https://i.imgur.com/zmzERpe.jpg"
+  - "https://i.imgur.com/zmzERpe.jpg"
+  - "https://i.imgur.com/zmzERpe.jpg"
 tags: bloging
 
 eleventyNavigation:

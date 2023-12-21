@@ -9,7 +9,7 @@
             <span class="mr-3">
               <span class="icon ion-ios-location"></span>
             </span>
-            <span class="">Unit 4, <br> on 2nd Floor, Abey House, <br> Abbey Lane <br>Arklow, <br>Co. Wicklow </span>
+            <span class="">Unit 4, Abbey House,<br>Abbey Lane,<br>Arklow,<br>Co. Wicklow,<br>Y14 YP64 </span>
           </li>
           <li class="d-flex">
             <span class="mr-3">
@@ -27,13 +27,20 @@
       </div>
       <div class="col-md-3">
         <h3 class="mb-4">Latest Blog</h3>
-        <ul class="list-unstyled blog-entry-footer"> {% set counter = 0 %} {%- for blog in collections.all | eleventyNavigation("blog") %} {% if counter < 3 %} <li>
-            <a href="{{ blog.url | url}}">
-              <span class="post-meta"> Filler for Githubpages</span>
+        <ul class="list-unstyled blog-entry-footer"> 
+          {% set counter = 0 %} 
+          {%- for blog in collections.all | eleventyNavigation("blog") %} 
+            {% if counter < 3 %} <li>
               <a href="{{ blog.url | url}}">
-                <h3>{{ blog.title }}</h3>
-              </a>
-          </li> {% set counter = counter + 1 %} {% endif %} {%- endfor -%} </ul>
+                <span class="post-meta"> {{ blog.page.date | readableDate}}</span>
+                <a href="{{ blog.url | url}}">
+                  <h3>{{ blog.title }}</h3>
+                </a>
+            </li> 
+            {% set counter = counter + 1 %} 
+            {% endif %} 
+          {%- endfor -%} 
+        </ul>
       </div>
       <div class="col-md-3">
         <h3>Connect</h3>

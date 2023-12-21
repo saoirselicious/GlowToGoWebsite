@@ -1,8 +1,7 @@
 //initSetup();
 
-let category ="Massage";
+let category ="massage";
 var formSelector = "form_" + category;
-console.log(document.getElementById("form_category"));
 const formControl = document.querySelector("#form_category");
 
 function removeAllChildNodes(parent) {
@@ -14,21 +13,21 @@ function removeAllChildNodes(parent) {
 
 function showHideCatList(selectedButtonID) {
   console.log(selectedButtonID);
-  if ("ul_"+category !== selectedButtonID) {
+  if (category !== selectedButtonID) {
     document.getElementById("ul_"+category).style.display = "none";
-    document.getElementById(selectedButtonID).style.display = "Block";
+    document.getElementById("ul_"+selectedButtonID).style.display = "Block";
   
     document.getElementById("form_"+category).style.display = "none";
-    document.getElementById(selectedButtonID.replace("form","ul")).style.display = "Block";
-    category = selectedButtonID.replace("ul_","");
+    document.getElementById("form_"+selectedButtonID).style.display = "Block";
+    category = selectedButtonID;
     formSelector = "form_" + category;
 
-    document.getElementById("imageWeb").src="images\\services\\"+category.toLowerCase()+".jpg"; 
-    document.getElementById("imageMobile").src="images\\services\\"+category.toLowerCase()+".jpg"; 
+    document.getElementById("imageWeb").src="images\\services\\"+category+".jpg"; 
+    document.getElementById("imageMobile").src="images\\services\\"+category+".jpg"; 
 
     console.log(formControl);
     formControl.value = category
-    rerunSelectCat(category)
+    //rerunSelectCat(category)
   }
 }
 
@@ -75,28 +74,25 @@ function setOptionDetails(selectedOptionID) {
   });
 }
 
-$("#form_category").change(function () {
-  rerunSelectCat($(this).val());
-});
-
 let selectOptions=document.getElementById("form_options"); 
 
 function rerunSelectCat(selectedCategory){
-  console.log(selectedCategory);
+  selectedCategory=selectedCategory;
+  console.log("ul_"+category, " " ,"ul_"+selectedCategory);
 
   document.getElementById("ul_"+category).style.display = "none";
   document.getElementById("ul_"+selectedCategory).style.display = "Block";
 
   document.getElementById("form_"+category).style.display = "none";
   document.getElementById("form_"+selectedCategory).style.display = "Block";
-  category = selectedCategory.replace("form_", "");
+  category = selectedCategory;
   formSelector = "form_" + category;
-  showHideCatList("ul_"+category);
+  //showHideCatList("ul_"+category);
 
-  document.getElementById("imageWeb").src="images\\services\\"+category.toLowerCase()+".jpg"; 
-  document.getElementById("imageMobile").src="images\\services\\"+category.toLowerCase()+".jpg";
+  document.getElementById("imageWeb").src="images\\services\\"+category+".jpg"; 
+  document.getElementById("imageMobile").src="images\\services\\"+category+".jpg";
 
-  setOptionDetails(document.getElementById("form_"+category).value.replace(/_/g, ' '));
+  //setOptionDetails(category);
 }
 
 async function fetchJSON(){

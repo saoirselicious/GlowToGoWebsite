@@ -1,0 +1,16 @@
+.swiper button{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: collapse;
+  font-size: 12px;
+  line-height: 1;
+}
+.swiper img{
+    width: 75%;
+    height: 75%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.swiper-button-next, .swiper-button-prev {
+    color: #000; 
+}
